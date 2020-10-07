@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /fibonatchi
+    session:
+      cookie:
+        name: App_${spring.application.name}
+      timeout: 180m
+
+spring:
+  profiles:
+    active: Development
+  application:
+    name: Fibonatchi
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+---
+
+spring:
+  profiles: Production
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+---
+spring:
+  profiles: Development
+  datasource:
+    url: jdbc:h2:mem:demo;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: demo
+    password:
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+    h2:
+      console:
+        enabled: false
+    jpa:
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+    show-sql: true
