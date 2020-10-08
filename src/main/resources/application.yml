@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    contextPath: /fibonatchi
+    contextPath: /fibonacci
     session:
       cookie:
         name: App_${spring.application.name}
