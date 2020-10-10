@@ -1,5 +1,6 @@
 package com.smart.demo.service;
 
 public interface Fibonacci {
-    public Integer getFib(int count);
+    Integer getFib(int count);
+    int fibonacci(int number);
 }
