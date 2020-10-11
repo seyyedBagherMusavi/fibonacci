@@ -20,9 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(name = "/api2")
 public class FiboRestController {
     private final Fibonacci fibonacci;
-    
+
     @GetMapping
-//    @PreAuthorize("isAuthenticated()")
     @PreAuthorize("permitAll()")
     public ResponseEntity<Integer> fibo(@RequestParam("fibNumber") int fibNumber){
         int fib = fibonacci.getFib(fibNumber);
