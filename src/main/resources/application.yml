@@ -9,7 +9,7 @@ server:
 
 spring:
   profiles:
-    active: Development
+    active: Production
   application:
     name: Fibonatchi
   jpa:
@@ -24,7 +24,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/springbootdb
     username: root
-    password: password
+    password:
     hikari:
       poolName: Hikari
       auto-commit: false

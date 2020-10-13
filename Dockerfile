@@ -4,7 +4,7 @@ COPY /target/*.jar /app.jar
 
 EXPOSE 8080
 
-ENV PROFILE=Development JVM_ARGS=""
+ENV PROFILE=Production JVM_ARGS=""
 
 VOLUME /tmp /var/log/ /var/
 
