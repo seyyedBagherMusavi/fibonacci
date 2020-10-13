@@ -6,4 +6,6 @@ run commands:
 - sudo docker build . --tag demo
 - cd ./src/main/docker
 - docker-compose -f app.yml up
+**TODO** \
+add liquibase and change security model
  
